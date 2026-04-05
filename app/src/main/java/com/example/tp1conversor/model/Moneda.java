@@ -2,37 +2,25 @@ package com.example.tp1conversor.model;
 
 import java.io.Serializable;
 
-public class Moneda implements Serializable {
+public class Moneda implements Serializable{
 
-    private String moneda;
-    private double valor;
+    private String nombre;
+    private double valorRespectoUSD; // cuánto vale 1 unidad en USD
 
-    public Moneda(String moneda, double valor) {
-        this.moneda = moneda;
-        this.valor = valor;
+    public Moneda(String nombre, double valorRespectoUSD) {
+        this.nombre = nombre;
+        this.valorRespectoUSD = valorRespectoUSD;
     }
 
-    public double convertir(double monto) {
-        return monto * valor;
+    public String getNombre() {
+        return nombre;
     }
 
-    public double convertirInverso(double monto) {
-        return monto / valor;
+    public double getValorRespectoUSD() {
+        return valorRespectoUSD;
     }
 
-    public String getMoneda() {
-        return moneda;
-    }
-
-    public void setMoneda(String moneda) {
-        this.moneda = moneda;
-    }
-
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setValorRespectoUSD(double valorRespectoUSD) {
+        this.valorRespectoUSD = valorRespectoUSD;
     }
 }

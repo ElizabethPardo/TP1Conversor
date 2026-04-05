@@ -2,44 +2,49 @@ package com.example.tp1conversor.ui;
 
 import com.example.tp1conversor.model.Moneda;
 
-public class ViewMainActivity {
+import java.io.Serializable;
 
-    private String valorDolar;
-    private String valorEuro;
-    private Moneda moneda;
+public class ViewMainActivity  implements Serializable {
+
+    private String valorOrigen;
+    private String valorDestino;
+    private Moneda monedaOrigen;
+    private Moneda monedaDestino;
 
     public ViewMainActivity() {
-        this.valorDolar = "";
-        this.valorEuro = "";
+        this.valorOrigen = "";
+        this.valorDestino = "";
     }
 
-    public ViewMainActivity(String valorDolar, String valorEuro, Moneda moneda) {
-        this.valorDolar = valorDolar;
-        this.valorEuro = valorEuro;
-        this.moneda = moneda;
+    public String getValorOrigen() {
+        return valorOrigen;
     }
 
-    public String getValorDolar() {
-        return valorDolar;
+    public void setValorOrigen(String valorOrigen) {
+        this.valorOrigen = valorOrigen;
     }
 
-    public void setValorDolar(String valorDolar) {
-        this.valorDolar = valorDolar;
+    public String getValorDestino() {
+        return valorDestino;
     }
 
-    public String getValorEuro() {
-        return valorEuro;
+    public void setValorDestino(String valorDestino) {
+        this.valorDestino = valorDestino;
     }
 
-    public void setValorEuro(String valorEuro) {
-        this.valorEuro = valorEuro;
+    public Moneda getMonedaOrigen() {
+        return monedaOrigen;
     }
 
-    public Moneda getMoneda() {
-        return moneda;
+    public void setMonedaOrigen(Moneda monedaOrigen) {
+        this.monedaOrigen = monedaOrigen;
     }
 
-    public void setMoneda(Moneda moneda) {
-        this.moneda = moneda;
+    public Moneda getMonedaDestino() {
+        return monedaDestino;
+    }
+
+    public void setMonedaDestino(Moneda monedaDestino) {
+        this.monedaDestino = monedaDestino;
     }
 }
